@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <!-- 
+  	配置全局的初始化参数
+   -->
+  <context-param>
+  	<param-name>company</param-name>
+  	<param-value>IBM</param-value>
+  </context-param>
+  
+  <!-- 配置监听器 -->
+  <listener>
+  	<listener-class>web.CountListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>SomeServlet</servlet-name>
+    <servlet-class>web.SomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SomeServlet</servlet-name>
+    <url-pattern>/some</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>OtherServlet</servlet-name>
+    <servlet-class>web.OtherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OtherServlet</servlet-name>
+    <url-pattern>/other</url-pattern>
+  </servlet-mapping>
+</web-app>
